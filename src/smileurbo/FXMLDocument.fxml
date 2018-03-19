@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane fx:id="tabPanePanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="668.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smileurbo.FXMLDocumentController">
+  <tabs>
+    <Tab fx:id="tabGra" text="Gra">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <MenuBar layoutY="2.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Gra">
+                        <items>
+                              <MenuItem fx:id="menuStworzGre" mnemonicParsing="false" onAction="#StworzGre" text="Stwórz Grę" />
+                          <MenuItem fx:id="menuRozpocznijGre" mnemonicParsing="false" onAction="#RozpocznijGre" text="Rozpocznij Gre" />
+                              <MenuItem fx:id="menuZakonczGre" mnemonicParsing="false" onAction="#ZakonczGre" text="Zakoncz Gre" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Pomoc">
+                        <items>
+                          <MenuItem fx:id="menuPomoc" mnemonicParsing="false" onAction="#Pomoc" text="Pomoc" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <ListView fx:id="listListaPostaci" layoutY="85.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Label layoutX="81.0" layoutY="58.0" text="Postaci" />
+                  <ComboBox fx:id="comboDodajPostać" layoutX="413.0" layoutY="85.0" prefWidth="150.0" promptText="Dodaj postać" />
+                  <Label layoutX="438.0" layoutY="58.0" text="Dodawanie Postaci" />
+                  <TextField fx:id="textImiePostaci" layoutX="414.0" layoutY="129.0" promptText="Imie" />
+                  <Button fx:id="buttonDodajPostac" layoutX="464.0" layoutY="172.0" mnemonicParsing="false" onAction="#DodajPostac" text="Dodaj" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="tabWioska" text="Stan Wioski">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="labelTura" layoutX="322.0" layoutY="5.0" text="Tura" />
+                  <Label layoutX="53.0" layoutY="49.0" text="Poziom Bezrobocia" />
+                  <Label layoutX="53.0" layoutY="92.0" text="Poziom Zanieczyszczen" />
+                  <Label layoutX="53.0" layoutY="138.0" text="Umieralnosc Noworodków" />
+                  <Label layoutX="53.0" layoutY="184.0" text="Oczekiwana Długość Życia" />
+                  <Label layoutX="53.0" layoutY="231.0" text="Koszty Życia" />
+                  <Label layoutX="53.0" layoutY="278.0" text="Niezależność Żywieniowa" />
+                  <Label fx:id="labelPoziomBezrobocia" layoutX="215.0" layoutY="49.0" />
+                  <Label fx:id="labelPoziomZanieczyszczen" layoutX="215.0" layoutY="92.0" />
+                  <Label fx:id="labelUmieralnoscNoworodkow" layoutX="215.0" layoutY="138.0" />
+                  <Label fx:id="labelOczekiwanaDlugoscZycia" layoutX="215.0" layoutY="184.0" />
+                  <Label fx:id="labelKosztyZycia" layoutX="215.0" layoutY="231.0" />
+                  <Label fx:id="labelNiezaleznoscZywieniowa" layoutX="215.0" layoutY="278.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="tabZebranie" text="Zebranie">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="314.0" layoutY="5.0" text="Decyzje" />
+                  <ComboBox fx:id="comboDecyzje" layoutX="54.0" layoutY="60.0" onAction="#WybierzDecyzje" prefWidth="150.0" promptText="Decyzje" />
+                  <Button fx:id="buttonDecyzje" layoutX="446.0" layoutY="333.0" mnemonicParsing="false" onAction="#PodejmijDecyzje" text="Wybuduj/Zorganizuj" />
+                  <Label fx:id="labelDecyzja" layoutX="494.0" layoutY="64.0" />
+                  <ComboBox fx:id="comboWielkosc" layoutX="433.0" layoutY="117.0" prefWidth="150.0" promptText="Wielkosc" />
+                  <ComboBox fx:id="comboDecyzjaTeren" layoutX="433.0" layoutY="200.0" prefWidth="150.0" promptText="Teren" />
+                  <Label layoutX="46.0" layoutY="204.0" text="Budżet Gminy" />
+                  <Label layoutX="158.0" layoutY="204.0" text="Budżet Inwestora" />
+                  <Label fx:id="labelBudzetGminy" layoutX="69.0" layoutY="280.0" />
+                  <Label fx:id="labelBudzetInwestora" layoutX="190.0" layoutY="280.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="tabPostaci" text="Postaci">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="labelPostac" layoutX="316.0" layoutY="5.0" text="Postać" />
+                  <ComboBox fx:id="comboWybierzPostac" layoutX="22.0" layoutY="59.0" onAction="#WyswietlPunkty" prefWidth="150.0" promptText="Wybierz" />
+                  <Label layoutX="57.0" layoutY="32.0" text="Wybierz Postac" />
+                  <Label layoutX="435.0" layoutY="63.0" text="Punkty" />
+                  <Label fx:id="labelPunktyPostaci" layoutX="439.0" layoutY="108.0" />
+                  <Button fx:id="buttonUsunPostac" layoutX="57.0" layoutY="113.0" mnemonicParsing="false" text="Usuń Postać" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Tereny">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="buttonDodajTeren" layoutX="308.0" layoutY="303.0" mnemonicParsing="false" onAction="#DodajTeren" text="Dodaj Teren" />
+                  <Label layoutX="296.0" layoutY="14.0" text="Specyfikacja Terenu" />
+                  <CheckBox fx:id="checkBliskoCentrum" layoutX="298.0" layoutY="58.0" mnemonicParsing="false" text="Blisko Centrum" />
+                  <CheckBox fx:id="checkZyznaGleba" layoutX="298.0" layoutY="93.0" mnemonicParsing="false" text="Żyzna Gleba" />
+                  <CheckBox fx:id="checkLadneWidoki" layoutX="298.0" layoutY="130.0" mnemonicParsing="false" text="Ładne Widoki" />
+                  <CheckBox fx:id="checkBliskoKosciola" layoutX="298.0" layoutY="165.0" mnemonicParsing="false" text="Blisko Kościoła" />
+                  <CheckBox fx:id="checkPrzyJeziorze" layoutX="298.0" layoutY="204.0" mnemonicParsing="false" text="Przy Jeziorze" />
+                  <CheckBox fx:id="checkPrzyDrodze" layoutX="299.0" layoutY="246.0" mnemonicParsing="false" text="Przy Drodze" />
+                  <Label layoutX="105.0" layoutY="14.0" text="Aktualne Tereny" />
+                  <ComboBox fx:id="comboTereny" layoutX="73.0" layoutY="45.0" onAction="#WybierzTeren" prefWidth="150.0" promptText="Tereny" />
+                  <TextArea fx:id="textTereny" layoutX="60.0" layoutY="93.0" prefHeight="124.0" prefWidth="175.0" promptText="Teren" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
