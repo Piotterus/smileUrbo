@@ -185,6 +185,7 @@ public class FXMLDocumentController implements Initializable {
         } else if (comboDodajPostać.getSelectionModel().getSelectedItem() == WojtGminy.NAZWA) {
             gra.getObsListaPostaci().add(new WojtGminy(this.textImiePostaci.getText()));
         }
+        this.textImiePostaci.clear();
 
     }
 
